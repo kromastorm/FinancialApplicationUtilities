@@ -16,7 +16,6 @@ public class FinCalendarUtility {
     public String getTradeDate()
     {
         Date t_Date = new GregorianCalendar().getTime();
-
         return dateFormat.format(t_Date);
     }
 
@@ -33,6 +32,15 @@ public class FinCalendarUtility {
     {
         Calendar cal = new GregorianCalendar();
         cal.add(Calendar.DATE, 2);
+        Date t_Date = cal.getTime();
+
+        return dateFormat.format(t_Date);
+    }
+
+    public String T_PLUS_3_SettlementDate()
+    {
+        Calendar cal = new GregorianCalendar();
+        cal.add(Calendar.DATE, 3);
         Date t_Date = cal.getTime();
 
         return dateFormat.format(t_Date);

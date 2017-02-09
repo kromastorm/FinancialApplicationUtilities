@@ -29,7 +29,7 @@ public class FinCalendarUtilityTest {
     }
 
     @Test
-    public void day_after_of_trade()
+    public void day_after_trade()
     {
         Date expectedDate = new Date();
         expectedDate.setDate(expectedDate.getDate()+1);
@@ -37,10 +37,18 @@ public class FinCalendarUtilityTest {
     }
 
     @Test
-    public void two_day_after_of_trade()
+    public void two_day_after_trade()
     {
         Date expectedDate = new Date();
         expectedDate.setDate(expectedDate.getDate()+2);
         assertEquals(  referenceDateFormat.format(expectedDate), calendarUtility.T_PLUS_2_SettlementDate());
+    }
+
+    @Test
+    public void three_day_after_trade()
+    {
+        Date expectedDate = new Date();
+        expectedDate.setDate(expectedDate.getDate()+3);
+        assertEquals(  referenceDateFormat.format(expectedDate), calendarUtility.T_PLUS_3_SettlementDate());
     }
 }
