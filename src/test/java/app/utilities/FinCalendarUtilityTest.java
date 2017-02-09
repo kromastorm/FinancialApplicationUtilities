@@ -1,11 +1,9 @@
 package app.utilities;
 
 import org.junit.Test;
-
 import java.text.Format;
 import java.text.SimpleDateFormat;
 import java.util.Date;
-
 import static org.junit.Assert.*;
 
 /**
